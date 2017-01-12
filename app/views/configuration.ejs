@@ -1,0 +1,278 @@
+<% include header %>
+<div class="content">
+  <div class="wrap">
+    <div class="content-grid">
+      <p><img src="images/top.png" title="">
+      </p>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Hardware" aria-expanded="true"
+               aria-controls="Hardware">
+              Hardware
+            </a>
+          </h4>
+        </div>
+        <div id="Hardware" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            * <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b" target="_blank">Raspberry Pi 3 </a>
+            <br> * <a href="http://livebox.orange.es/b/inicio.html" target="_blank">LiveBox 2.0</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#NoIp" aria-expanded="true"
+               aria-controls="NoIp">
+              NoIp
+            </a>
+          </h4>
+        </div>
+        <div id="NoIp" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            * <a href="http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client/"
+                 target="_blank">No Ip</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#SSH"
+               aria-expanded="false" aria-controls="SSH">
+              SSH Aceso Remoto
+            </a>
+          </h4>
+        </div>
+        <div id="SSH" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <p><a href="http://www.ajpdsoft.com/modules.php?name=News&amp;file=article&amp;sid=703/” target="
+                  _blank”="">Configuración SSH</a></p>
+            <p> IPTables no configurado y firewalld <a
+                href="https://www.liquidweb.com/kb/how-to-stop-and-disable-firewalld-on-centos-7/” target=" _blank”="">desactivado</a>.
+            </p>
+            <p> * Cambiar el password de root (sudo passwd root) y/o crear un usuario (sudo adduser username) </p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#FTP"
+               aria-expanded="false" aria-controls="FTP">
+              Servicio FTP
+            </a>
+          </h4>
+        </div>
+        <div id="FTP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Configuración e instalación del servicio <a
+                href="http://www.krizna.com/centos/setup-ftp-server-centos-7-vsftp/" target="_blank">ftp</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#NodeJS"
+               aria-expanded="false" aria-controls="NodeJS">
+              NODE.JS
+            </a>
+          </h4>
+        </div>
+        <div id="NodeJS" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Instalamos Node</p>
+            <code>
+              <p>cd usr/local/bin</p>
+              <p>wget https://nodejs.org/dist/v6.9.2/node-v6.9.2-linux-armv7l.tar.xz </p>
+              <p> xz -d node-v6.9.2-linux-armv7l.tar.xz </p>
+              <p> tar xvfj node-v6.9.2-linux-armv7l.tar </p>
+              <p>mv /usr/local/bin/node-v6.9.2-linux-armv7l/bin/* /usr/local/bin/ </p>
+              <p>node --version </p>
+            </code>
+            <p>Añadimos al PATH las rutas de node en un fichero, por ejemplo .bash_profile</p>
+            <code>
+              <p>export NODE_JS_HOME=/usr/local/ </p>
+              <p>export PATH=$PATH:$NODE_JS_HOME/bin </p>
+            </code>
+            <p>Y ya podemos instalar por NPM las dependencias que necesitamos</p>
+            <p>* <a
+                href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7"
+                target="_blank">Alternativa</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#NGINX"
+               aria-expanded="false" aria-controls="NGINX">
+              NGINX
+            </a>
+          </h4>
+        </div>
+        <div id="NGINX" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Instrucciones <a href="https://fernetjs.com/2013/03/nodejs-a-la-nube-con-nginx-en-un-vps/"
+                                target="_blank">NGINX</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#PM2"
+               aria-expanded="false" aria-controls="PM2">
+              Site como Servicio
+            </a>
+          </h4>
+        </div>
+        <div id="PM2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>PM2 <a target="_blank"
+                      href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7#install-pm2">Instalar
+                y configurar PM2</a></p>
+            <p>* <a href="https://keymetrics.io/">keymetrics.io</a> recomendable para las metricas y estado del servidor
+              y del site</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#JAVA8"
+               aria-expanded="false" aria-controls="JAVA8">
+              JAVA8_111
+            </a>
+          </h4>
+        </div>
+        <div id="JAVA8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Para instalar JAVA8</p>
+            <code>
+              <p>cd /opt/
+              </p>
+              <p>wget download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-arm32-vfp-hflt.tar.gz</p>
+              <p>tar -xvzf jdk-8u111-linux-arm32-vfp-hflt.tar.gz</p>
+              <p>rm jdk-8u111-linux-arm32-vfp-hflt.tar.gz</p>
+              <p>mv jdk1.8.0_111 /opt/java8_111</p>
+              <p>alternatives --install /usr/bin/java java /opt/java8_111/bin/java 1</p>
+              <p>alternatives --config java</p>
+            </code>
+            <p>* <a href="http://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/"
+                    target="_blank">Documentación</a> para varias versiones de java</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#OrientDB"
+               aria-expanded="false" aria-controls="OrientDB">
+              OrientDB
+            </a>
+          </h4>
+        </div>
+        <div id="OrientDB" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Para instalar <a href="http://orientdb.com/" target="_blank">OrientDB</a></p>
+            <code>
+              <p>cd /usr/share/
+              </p>
+              <p>wget http://orientdb.com/download.php?file=orientdb-community-2.2.14.tar.gz&amp;os=linux</p>
+              <p>tar -xvzf orientdb-community-2.2.14.tar.gz</p>
+              <p>rm orientdb-community-2.2.14.tar.gz</p>
+              <p>cd /orientdb-community-2.2.14/bin</p>
+            </code>
+            <p>Editamos la linea del fichero server.sh</p>
+            <code><p># Raspberry Pi check (Java VM does not run with -server argument on ARMv6)
+                if [ `uname -m` != "armv7l" ]; then
+                JAVA_OPTS="$JAVA_OPTS -server "
+                fi
+                export JAVA_OPTS</p>
+              <p>sudo sh server.sh </p>
+
+            </code>
+            <p>* <a href="http://orientdb.com/docs/2.0/orientdb.wiki/Tutorial-Run-the-server.html" target="_blank">Documentación</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#KAFKA"
+               aria-expanded="false" aria-controls="KAFKA">
+              Apache Kafka
+            </a>
+          </h4>
+        </div>
+        <div id="KAFKA" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Para instalar <a href="http://kafka.apache.org/" target="_blank"> KAFKA</a></p>
+            <code>
+              <p>cd /opt
+              </p>
+              <p>wget http://apache.mirror.anlx.net/kafka/0.10.1.1/kafka_2.11-0.10.1.1.tgz</p>
+              <p>tar -xvf kafka_2.11-0.10.1.1.tgz</p>
+              <p>cd /etc/systemd/system</p>
+              <br>
+              <p>nano kakfa.service </p>
+              <p>
+                [Unit]
+                Description=Apache Kafka server (broker)
+                Documentation=http://kafka.apache.org/documentation.html
+                Requires=network.target remote-fs.target
+                After=network.target remote-fs.target kafka-zookeeper.service
+
+                [Service]
+                Type=simple
+                User=root
+                Group=root
+                Environment=JAVA_HOME=/opt/java8_111/
+                ExecStart=/opt/kafka_2.11-0.10.1.1/bin/kafka-server-start.sh
+                /opt/kafka_2.11-0.10.1.1/config/server.properties
+                ExecStop=/opt/kafka_2.11-0.10.1.1/bin/kafka-server-stop.sh
+
+                [Install]
+                WantedBy=multi-user.target
+              </p>
+              <p> nano kakfa-zookeeper.service</p>
+              <p>
+                [Unit]
+                Description=Apache Zookeeper server (Kafka)
+                Documentation=http://zookeeper.apache.org
+                Requires=network.target remote-fs.target
+                After=network.target remote-fs.target
+
+                [Service]
+                Type=simple
+                User=root
+                Group=root
+                Environment=JAVA_HOME=/opt/java8_111/
+                ExecStart=/opt/kafka_2.11-0.10.1.1/bin/zookeeper-server-start.sh
+                /opt/kafka_2.11-0.10.1.1/config/zookeeper.properties
+                ExecStop=/opt/kafka_2.11-0.10.1.1/bin/zookeeper-server-stop.sh
+
+                [Install]
+                WantedBy=multi-user.target
+              </p>
+              <p> systemctl daemon-reload </p>
+              <p> systemctl start kafka-zookeeper.service</p>
+              <p> systemctl start kafka.service</p>
+              <p> systemctl enable kafka-zookeeper.service</p>
+              <p> systemctl enable kafka.service</p>
+              <p> systemctl status kafka.service</p>
+              <p> systemctl status kafka-zookeeper.service</p>
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include footer %>

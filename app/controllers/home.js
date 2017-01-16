@@ -16,3 +16,11 @@ router.get('/', function (req, res, next) {
     });
   });
 });
+
+
+router.get('/configuration', function (req, res, next) {
+  Article.find(function (err, articles) {
+    if (err) return next(err);
+    res.render('configuration');
+  });
+});
